@@ -112,7 +112,7 @@ public class ReturnRegisterController {
 		}
 		
 		/* update the fields and transfer Id of oldObject to newObject */
-		newReturn.setDateOfReturn(LocalDate.now());
+		newReturn.setDateOfReturn(oldReturn.getDateOfReturn());
 		newReturn.setGodown(godown);
 		newReturn.setId(oldReturn.getId());
 			

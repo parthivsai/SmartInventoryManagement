@@ -145,7 +145,7 @@ public class CustomerProductController {
 		newCustomerProduct.setId(oldCustomerProduct.getId());
 		newCustomerProduct.setProduct(product);
 		newCustomerProduct.setCustomer(customer);
-		newCustomerProduct.setDateOfPurchase(LocalDate.now());
+		newCustomerProduct.setDateOfPurchase(oldCustomerProduct.getDateOfPurchase());
 		
 		/* Check if that product is available in proper quantity in InwardRegister before allowing to update */
 		boolean status = inwardRegisterService.checkQuantity(productId,newCustomerProduct.getQuantityPurchased());

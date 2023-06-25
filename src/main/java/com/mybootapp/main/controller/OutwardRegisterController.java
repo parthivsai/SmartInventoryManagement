@@ -148,7 +148,7 @@ public class OutwardRegisterController {
 		}
 
 		/* update the fields and transfer Id of oldObject to newObject */
-		newOutward.setDateOfDelivery(LocalDate.now());
+		newOutward.setDateOfDelivery(oldOutward.getDateOfDelivery());
 		newOutward.setProduct(product);
 		newOutward.setGodown(godown);
 		newOutward.setCustomer(customer);

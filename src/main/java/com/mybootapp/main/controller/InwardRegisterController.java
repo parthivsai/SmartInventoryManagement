@@ -146,6 +146,7 @@ public class InwardRegisterController {
 		newInward.setProduct(product);
 		newInward.setSupplier(supplier);
 		newInward.setGodown(godown);
+		newInward.setDateOfSupply(oldInward.getDateOfSupply());
 
 		/* Save it in the database */
 		newInward = inwardRegisterService.insert(newInward);
